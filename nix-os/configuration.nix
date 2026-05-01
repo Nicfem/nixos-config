@@ -11,6 +11,10 @@
       ./modules
     ];
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  services.libinput.enable = true;
+
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -70,7 +74,8 @@
     };
   };
 
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
+  programs.xwayland.enable = true;
   # services.displayManager.sddm.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are

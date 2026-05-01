@@ -12,14 +12,13 @@
     };
 
     history.size = 10000;
-    # history.ignoreAllDups = true;
     history.path = "$HOME/.zsh_history";
-    # history.ignorePatterns = ["rm *" "pkill *" "cp *"];
 
     oh-my-zsh = {
       enable = true;
       plugins = [
-        "git"         # also requires `programs.git.enable = true;`
+        "git"
+        "fzf"
       ];
       theme = "robbyrussell";
     };

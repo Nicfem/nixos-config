@@ -216,7 +216,8 @@
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
         "niri": "niri",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "tmux": "tmux"
       }
     },
     "rust-overlay": {
@@ -237,6 +238,23 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "tmux": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1777919114,
+        "narHash": "sha256-hwwB4A1PUxDmodEFkRNx4Kcc7AqGNpcFBQbTk1jioZ0=",
+        "owner": "Nicfem",
+        "repo": "tmux",
+        "rev": "73b97ff8d2ca2bde21bdd655baae8a978bb5bf91",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Nicfem",
+        "ref": "nixos",
+        "repo": "tmux",
         "type": "github"
       }
     },

@@ -13,12 +13,14 @@
     udisks
     
     # Desktop apps
-    kitty
     telegram-desktop
 
     # Development
     nodejs_24
     cargo
     gcc
+
+    # Core
+    xwayland-satellite
   ];
 }

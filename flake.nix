@@ -11,14 +11,17 @@
 
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v1.0.0";
-
-      # Optional but recommended to limit the size of your system closure.
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     niri = {
       url = "github:sodiboo/niri-flake";
-      inputs.nixpkgs.follows = "nixpkgs";  # важно!
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    tmux = {
+      url = "github:Nicfem/tmux/nixos";
+      flake = false;
     };
   };
 
@@ -45,21 +48,11 @@
             useGlobalPkgs = true;
             useUserPackages = true;
             backupFileExtension = "backup";
-            extraSpecialArgs = { inherit homeStateVersion user; };
+            extraSpecialArgs = { inherit inputs homeStateVersion user; };
             users.${user} = import ./home-manager/home.nix;
           };
         }
       ];
     };
-
-    
-    # Standalone
-    # homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
-    #   pkgs = nixpkgs.legacyPackages.${system};
-    #   extraSpecialArgs = { 
-    #     inherit inputs homeStateVersion user;
-    #   };
-    #   modules = [ ./home-manager/home.nix ];
-    # };
   };
 }
