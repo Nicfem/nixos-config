@@ -13,9 +13,13 @@ let
     dontUnpack = true;
 
     installPhase = ''
-      mkdir -p $out
-      cp $src $out/vot-extension@firefox.xpi
+      mkdir -p $out/share/mozilla/extensions/\{ec8030f7-c20a-464f-9b0e-13a3a9e97384\}
+      cp $src $out/share/mozilla/extensions/\{ec8030f7-c20a-464f-9b0e-13a3a9e97384\}/vot-extension@firefox.xpi
     '';
+    # installPhase = ''
+    #   mkdir -p $out
+    #   cp $src $out/vot-extension@firefox.xpi
+    # '';
   };
 in
 {
