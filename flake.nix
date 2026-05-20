@@ -32,7 +32,7 @@
     homeStateVersion = "25.11";
   in {
     nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
-      system = system;
+      inherit system;
       specialArgs = {
         inherit inputs homeStateVersion hostname user;
       };

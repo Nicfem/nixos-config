@@ -14,6 +14,7 @@
     
     # Desktop apps
     telegram-desktop
+    discord
 
     # Development
     nodejs_24
