@@ -46,6 +46,6 @@
     };
 
     # Тема (выбери любую по вкусу)
-    theme = "Catppuccin-Mocha";
+    themeFile = "Catppuccin-Mocha";
   };
 }

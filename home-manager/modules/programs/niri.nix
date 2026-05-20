@@ -13,7 +13,7 @@
         enable = true;
       };
       
-      warp-mouse-to-focus = false;
+      warp-mouse-to-focus.enable = false;
 
       focus-follows-mouse.max-scroll-amount = "20%";
       
