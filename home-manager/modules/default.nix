@@ -5,5 +5,6 @@
     ./zsh.nix
     ./tmux.nix
     ./claude-code.nix
+    ./zoxide.nix
   ];
 }
