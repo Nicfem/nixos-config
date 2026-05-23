@@ -4,24 +4,12 @@
   programs.kitty = {
     enable = true;
     
-    # Используем Nerd Font (убедись, что он установлен в системе)
     font = {
       name = "JetBrainsMono Nerd Font";
       size = 11;
     };
 
     settings = {
-      # "ctrl+0x63" = "copy_or_interrupt";
-      # "ctrl+0x76" = "paste_from_clipboard";
-      #
-      # "ctrl+c" = "copy_or_interrupt";
-      # "ctrl+с" = "copy_or_interrupt"; # Русская 'с'
-      # "ctrl+v" = "paste_from_clipboard";
-      # "ctrl+м" = "paste_from_clipboard"; # Русская 'м'
-      #
-      # "ctrl+shift+c" = "no_op";
-      # "ctrl+shift+v" = "no_op";
-
       scrollback_lines = 10000;
       enable_audio_bell = false;
       update_check_interval = 0;
