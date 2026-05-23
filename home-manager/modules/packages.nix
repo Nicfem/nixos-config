@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
 
   home.packages = with pkgs; [
     # CLI utils
@@ -11,6 +11,9 @@
     zip
     fzf
     udisks
+
+    # my packages
+    inputs.ags.packages.${pkgs.system}.default
     
     # Desktop apps
     telegram-desktop
@@ -21,7 +24,8 @@
     cargo
     gcc
 
-    # Core
+    # niri deps
     xwayland-satellite
+    xdg-desktop-portal-gnome
   ];
 }

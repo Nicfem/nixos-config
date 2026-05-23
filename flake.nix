@@ -23,6 +23,11 @@
       url = "github:Nicfem/tmux/nixos";
       flake = false;
     };
+
+    ags = {
+      url = "github:Nicfem/ags";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, lanzaboote, home-manager, niri, ... }@inputs: let

@@ -1,5 +1,25 @@
 {
   programs.niri.settings = {
+    cursor = {
+      size = 24;
+    };
+
+    layout = {
+      background-color = "transparent";
+    };
+
+    layer-rules = [
+      {
+        matches = [{ namespace = "my-clock";}];
+        place-within-backdrop = true;
+      }
+    ];
+
+    environment = {
+      ELECTRON_OZONE_PLATFORM_HINT = "auto";
+      XCURSOR_SIZE = "24";
+      WLR_NO_HARDWARE_CURSORS  ="1";
+    };
     gestures = {
       hot-corners.enable = false;
     };
@@ -54,6 +74,7 @@
           bottom-right = 12.0;
         };
         clip-to-geometry = true; # Обрезает углы самого окна под радиус
+        block-out-from = null;
       }
       {
         matches = [{ app-id = "^firefox$"; }]; # Регулярное выражение
@@ -64,7 +85,7 @@
         
         # Устанавливаем прозрачность (0.0 - невидимый, 1.0 - плотный)
         # Попробуйте 0.9 для легкого эффекта
-        opacity = 0.9; 
+        opacity = 0.8; 
         
         # Отключаем сплошной фон под обводкой, чтобы видеть обои сквозь прозрачность
         draw-border-with-background = false;
@@ -73,9 +94,11 @@
 
     spawn-at-startup = [
       { argv = [ "firefox" ]; }
+      { argv = [ "discord" ]; }
+      { argv = [ "Telegram" ]; }
     ];
 
-    screenshot-path = "~/Pictures/Screenshots/";
+    screenshot-path = "~/Pictures/Screenshots/Screen_%Y-%m-%d_%H-%M-%S.png";
 
     binds = {
       # Твои биндинги
@@ -85,11 +108,10 @@
 
       # Приложения (дефолтные)
       "Mod+Return".action.spawn = "kitty";
-      "Mod+D".action.spawn = "fuzzel";
       "Mod+Shift+Slash".action.show-hotkey-overlay = [ ];
 
       # Закрытие
-      "Mod+Q".action.close-window = [ ];
+      "Mod+Alt+C".action.close-window = [ ];
 
       # Фокус мониторов
       "Mod+Alt+H".action.focus-monitor-left = [ ];
@@ -100,10 +122,6 @@
       "Mod+J".action.focus-window-or-workspace-down = [ ];
       "Mod+K".action.focus-window-or-workspace-up = [ ];
       "Mod+L".action.focus-column-or-monitor-right = [ ];
-      "Mod+Left".action.focus-column-left = [ ];
-      "Mod+Down".action.focus-window-or-workspace-down = [ ];
-      "Mod+Up".action.focus-window-or-workspace-up = [ ];
-      "Mod+Right".action.focus-column-right = [ ];
 
       # Перемещение окон (исправлено below/above -> down/up)
       "Mod+Shift+H".action.move-column-left-or-to-monitor-left = [ ];
@@ -114,6 +132,8 @@
       "Mod+Shift+Down".action.move-window-down-or-to-workspace-down = [ ];
       "Mod+Shift+Up".action.move-window-up-or-to-workspace-up = [ ];
       "Mod+Shift+Right".action.move-column-right = [ ];
+      "Mod+Alt+V".action.switch-focus-between-floating-and-tiling = [ ];
+      "Mod+V".action.toggle-window-floating = [ ];
 
       # Начало / конец ряда
       "Mod+Home".action.focus-column-first = [ ];
@@ -126,20 +146,11 @@
       "Mod+Shift+Ctrl+J".action.move-column-to-monitor-down = [ ];
       "Mod+Shift+Ctrl+K".action.move-column-to-monitor-up = [ ];
       "Mod+Shift+Ctrl+L".action.move-column-to-monitor-right = [ ];
-      "Mod+Shift+Ctrl+Left".action.move-column-to-monitor-left = [ ];
-      "Mod+Shift+Ctrl+Down".action.move-column-to-monitor-down = [ ];
-      "Mod+Shift+Ctrl+Up".action.move-column-to-monitor-up = [ ];
-      "Mod+Shift+Ctrl+Right".action.move-column-to-monitor-right = [ ];
 
-      # Воркспейсы вверх/вниз
-      "Mod+Page_Down".action.focus-workspace-down = [ ];
-      "Mod+Page_Up".action.focus-workspace-up = [ ];
       "Mod+U".action.focus-workspace-down = [ ];
       "Mod+I".action.focus-workspace-up = [ ];
       
       # Исправлено: move-column-to-workspace-down/up
-      "Mod+Shift+Page_Down".action.move-column-to-workspace-down = [ ];
-      "Mod+Shift+Page_Up".action.move-column-to-workspace-up = [ ];
       "Mod+Shift+U".action.move-column-to-workspace-down = [ ];
       "Mod+Shift+I".action.move-column-to-workspace-up = [ ];
       
