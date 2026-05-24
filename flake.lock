@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1779466936,
-        "narHash": "sha256-o4xQlUJu3jERtLg/NO1cIHUKxJ7+JC8JrOFPYLUcr8Q=",
+        "lastModified": 1779610455,
+        "narHash": "sha256-sFbQ5H0n2AEMO519r0N/m8sPkAX++nh5Dh2RqvVPxI4=",
         "owner": "Nicfem",
         "repo": "ags",
-        "rev": "c15201dcfdd2169837eeece67b9c2fb234ac9e12",
+        "rev": "fa417bbbc9a7b128d7608d718a5f429215ada16e",
         "type": "github"
       },
       "original": {
