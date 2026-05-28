@@ -11,5 +11,6 @@
     ./bluethooth.nix
     ./audio.nix
     ./programs
+    ./claude-code-patch.nix
   ];
 }

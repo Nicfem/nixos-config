@@ -110,6 +110,9 @@
       "Mod+Return".action.spawn = "kitty";
       "Mod+Shift+Slash".action.show-hotkey-overlay = [ ];
 
+      # Ags
+      "Mod+P".action.spawn = ["ags" "toggle"];
+
       # Закрытие
       "Mod+Alt+C".action.close-window = [ ];
 

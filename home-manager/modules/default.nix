@@ -6,5 +6,6 @@
     ./tmux.nix
     ./claude-code.nix
     ./zoxide.nix
+    ./yazi.nix
   ];
 }

@@ -28,6 +28,11 @@
       url = "github:Nicfem/ags";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    tweakcc = {
+      url = "github:Nicfem/tweakcc";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, lanzaboote, home-manager, niri, ... }@inputs: let
