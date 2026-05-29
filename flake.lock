@@ -283,7 +283,8 @@
         "lanzaboote": "lanzaboote",
         "niri": "niri",
         "nixpkgs": "nixpkgs",
-        "tmux": "tmux"
+        "tmux": "tmux",
+        "tweakcc": "tweakcc"
       }
     },
     "rust-overlay": {
@@ -321,6 +322,26 @@
         "owner": "Nicfem",
         "ref": "nixos",
         "repo": "tmux",
+        "type": "github"
+      }
+    },
+    "tweakcc": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1779968384,
+        "narHash": "sha256-g6g/KaPVh5QapjzhdKWrPAeMY8lWEZGAfWJLL/a/Z2M=",
+        "owner": "Nicfem",
+        "repo": "tweakcc",
+        "rev": "abca0315e0a7d7ed40772e8482f86c92676fca3f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Nicfem",
+        "repo": "tweakcc",
         "type": "github"
       }
     },
