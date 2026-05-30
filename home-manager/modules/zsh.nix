@@ -1,4 +1,6 @@
 {
+  home.sessionVariables.NIXPKGS_ALLOW_UNFREE = "1";
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -10,6 +12,7 @@
       edit = "sudo -e";
       update = "sudo nixos-rebuild switch";
     };
+
 
     history.size = 10000;
     history.path = "$HOME/.zsh_history";

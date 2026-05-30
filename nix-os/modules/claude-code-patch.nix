@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 
 let
-  tweakcc = inputs.tweakcc.packages.${pkgs.system}.default;
+  tweakcc = inputs.tweakcc.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in
 {
   nixpkgs.overlays = [
