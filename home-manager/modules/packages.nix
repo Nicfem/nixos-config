@@ -1,4 +1,16 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }:
+
+let
+  arc-midnight-cursors = pkgs.callPackage ./pkgs/arc-midnight-cursors.nix { };
+in {
+
+  home.pointerCursor = {
+    package = arc-midnight-cursors;
+    name = "ArcMidnight-Cursors";
+    size = 24;
+    gtk.enable = true;
+    x11.enable = true;
+  };
 
   home.packages = with pkgs; [
     # CLI utils
@@ -13,7 +25,7 @@
     udisks
 
     # my packages
-    inputs.ags.packages.${pkgs.system}.default
+    inputs.ags.packages.${pkgs.stdenv.hostPlatform.system}.default
     
     # Desktop apps
     telegram-desktop

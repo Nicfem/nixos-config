@@ -1,4 +1,5 @@
 { config, pkgs, lib, ... }:
+
 {
   programs.firefox = {
     enable = true;
@@ -6,6 +7,9 @@
       # ИСПРАВЛЕНО: Современный синтаксис Home Manager без депрекейшн-ворнингов
       path = "h3im5o8f.default";
       isDefault = true;
+      settings = {
+        "full-screen-api.warning.timeout" = 0;
+      };
     };
 
     policies = {

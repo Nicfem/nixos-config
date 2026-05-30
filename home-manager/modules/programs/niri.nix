@@ -1,6 +1,7 @@
 {
   programs.niri.settings = {
     cursor = {
+      theme = "ArcMidnight-Cursors";
       size = 24;
     };
 
